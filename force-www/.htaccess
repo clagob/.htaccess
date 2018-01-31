@@ -1,0 +1,9 @@
+# Force WWW in the URL
+
+# Redirect all the traffic to http://www.domain.net
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^domain.net$ [NC]
+RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
