@@ -1,0 +1,15 @@
+# SCHEDULED MAINTENANCE MODE
+
+# Set for 31/01/2018 from 0800 to 0830
+# This will refer to the server time.
+# The server might be set to a different time zone from the web user.
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^maintenance\.php$ - [L]
+RewriteCond %{TIME_YEAR}%{TIME_MON}%{TIME_DAY} =20180131
+RewriteCond %{TIME_HOUR}%{TIME_MIN} >0000
+RewriteCond %{TIME_HOUR}%{TIME_MIN} <0031
+RewriteRule . /maintenance.php [L]
+</IfModule>
