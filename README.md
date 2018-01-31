@@ -2,6 +2,6 @@
 
 Here you can find some useful example for the `.htaccess`
 
-Just search betwwen the folders.
+Just search between the folders.
 
 Enjoy it.
